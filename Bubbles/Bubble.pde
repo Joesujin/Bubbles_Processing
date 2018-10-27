@@ -5,21 +5,23 @@ class Bubble
   float diam;
   float yspeed;
   float xspeed;
+  float col;
   
-  Bubble(float tempD)
+  Bubble(float tempD,float tempC)
   {
     x = random(width);
     y = height;
     diam = tempD;
     yspeed = random(3,10);
     xspeed = random(3,10);
+    col = tempC;
   }
   
   void display()
   {
     //noStroke();
     stroke(0);
-    fill(20,random(255),50);
+    fill(col,20,50);
     ellipse(x,y,diam,diam);
   }
   
